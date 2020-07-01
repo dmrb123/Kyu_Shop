@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kyu_Shop</title>
+    <style>
+        body{
+            margin:0;
+            overflow-x: hidden;
+        }
+        .head{
+        margin:0;
+        background-color: rgb(41, 36, 36);
+        height:100px;
+        width:100%;
+        overflow:hidden;
+        padding-left:40px;
+        position: fixed;
+        top:0px;
+        }
+        .head_2{
+            background-color:rgb(141, 125, 125);
+            height:50px;
+            width:100%;
+            overflow:hidden;
+            padding-left:40px;
+            padding-top:10px;
+            position: fixed;
+            top:100px;
+        }
+        .middle{
+            padding-top:150px;
+            background-color:white;
+            height:800px;
+            width:100%;
+            border:2px solid black;
+        }
+
+        .middle_top{
+            background-color:rgb(177, 171, 162);
+            height:50px;
+            width:100%;
+        }
+        .bottom_bottom{
+            background-color: rgb(141, 125, 125);
+            height: 100px;
+            text-align: center;
+            padding-top:5px;
+            font-size:13px;
+        }
+        a{
+          text-decoration: none;
+        }
+        .th1{
+            border:2px solid black;
+            border-radius: 4px;
+            width:150px;
+            height:30px;
+        }
+        .th2{
+            border-bottom: 2px solid rgb(41, 36, 36);
+            width:1%;
+            height:161px;
+        }
+        .th3{
+            width:50px;
+            height:40px;
+        }
+        .menu{
+            border-bottom: 2px solid black;
+            width:1%;
+            height:150px;
+        }
+        .td1{
+            width:150px;
+            height:30px;
+            text-align:center;
+            border-right:2px solid rgb(153, 136, 136);
+        }
+        .ID{
+            width:100px;
+            height:20px;
+        }
+        .sign_text{
+            width:60px;
+            height:60px;
+        }
+        .sign_table{
+            border:1px solid rgb(216, 215, 215);
+            border-right: none;
+            border-left: none;
+            padding-left:4px;
+        }
+        .sign_name{
+            border:1px solid rgb(216, 215, 215);
+            border-right: none;
+            background-color: rgb(238, 238, 238);
+            padding-left:4px;
+            width:200px;
+        }
+        .bottom_bottom{
+            background-color: rgb(141, 125, 125);
+            height: 100px;
+            text-align: center;
+            padding-top:5px;
+            font-size:13px;
+        }
+    </style>
+    <script>
+        function check()
+        {
+            
+            if(frm.password1.value==frm.password2.value)
+            {
+            frm.checks.value="비밀번호가 일치합니다!!";
+            }
+            else
+            {
+            frm.checks.value="비밀번호가 일치하지 않습니다.";
+            }
+        }
+        function error()
+        {
+            alert("서버 준비중입니다.");
+        }
+    </script> 
+    
+</head>
+<body bgcolor="white">
+    <div class="head">
+        <h1><a href="Kyu_Shop.html"style="color:white;">Kyu_Shop</a></h1>
+    </div>
+    <div class="head_2">
+        <table>
+            <tr>
+                <th class="th1"><a href="로그인.html" style="font-size:20px; color:white">login/sign</a></th>
+                <td class="td1"><a href="회사소개.html" style="color:white">회사 소개</a></td>
+                <td class="td1"><a href="공지사항.html" style="color:white">공지 사항</a></td>
+                <td class="td1"><a href="고객센터.html" style="color:white">문의 사항</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="middle">
+            <h1 style="background-color: rgb(177, 171, 162);height:50px;"><center>회원 가입</center></h1>
+            <hr>
+            <br>
+            <form id="frm">         
+                    <table align="center" style="width:800px;">
+                        <tr>
+                            <td class="sign_name">아이디</td>
+                            <td class="sign_text sign_table" colspan="2s"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="sign_name">비밀번호</td>
+                            <td class="sign_text sign_table" colspan="2"><input type="password" id="password1"></td>
+                        </tr>
+                        <tr>
+                            <td class="sign_name">비밀번호 확인</td>
+                            <td class="sign_text sign_table" colspan="2"><input type="password" id="password2" onkeyup="check()">&nbsp;<input type="text" id="checks" style="border:none; background-color: white; width:200px;" disabled="disabled">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sign_name">비밀번호 확인 질문</td>
+                            <td class="sign_text sign_table" colspan="2">
+                            <select>
+                                <option>기억에 남는 추억의 장소는?</option>
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sign_name">비밀번호 확인 답변</td>
+                            <td  class="sign_text sign_table"colspan="2"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="sign_name">이름</td>
+                            <td class="sign_text sign_table"colspan="2"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="sign_name">휴대전화</td>
+                            <td class="sign_text sign_table">
+                                <select>
+                                    <option>010</option><option>011</option><option>016</option>
+                                </select>
+                                -
+                                <td class="sign_table"><input type="text" style="width:50px;"> - <input type="text" style="width:50px;"></td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sign_name">이메일</td>
+                            <td class="sign_text sign_table" colspan="2"><input type="text"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <hr style="width:850px;">
+                    <br>
+                    <center><input type="submit" value="회원가입" style="width:800px; height:50px; font-size:20px;" onclick="error()"></center>
+            </form>
+        </div>
+    <hr>
+    
+    <div class="bottom_bottom">
+        <p>회사명: Kyu_Shop / 사업장 주소: 경기도 안산시 단원구 초지동 행복한마을 2008동</p><hr>
+        고객센터 : 010 - 8012 - 5510<br>
+        평일: 10:00 ~ 17:00 / 주말: 12:00 ~ 15:00
+    </div>
+</body>
+</html> 

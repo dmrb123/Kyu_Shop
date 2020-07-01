@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kyu_Shop</title>
+    <style>
+        body{
+            margin:0;
+            overflow-x: hidden;
+        }
+        .head{
+        margin:0;
+        background-color: rgb(41, 36, 36);
+        height:100px;
+        width:100%;
+        overflow:hidden;
+        padding-left:40px;
+        position: fixed;
+        top:0px;
+        }
+        .head_2{
+            background-color:rgb(141, 125, 125);
+            height:50px;
+            width:100%;
+            overflow:hidden;
+            padding-left:40px;
+            padding-top:10px;
+            position: fixed;
+            top:100px;
+        }
+        .middle{
+            background-color:rgba(241, 236, 236, 0.438);
+            height:500px;
+            width:100%;
+            margin-top:160px;
+            border:2px solid black;
+        }
+        .middle_top{
+            background-color:rgb(177, 171, 162);
+            height:50px;
+            width:100%;
+        }
+        .bottom{
+            background-color:white;
+            height:900px;  
+            overflow:hidden;
+            width:100%;
+        }
+        .bottom_top{
+            background-color:rgb(41, 36, 36);
+            height:100px;
+            width:100%;
+            overflow:hidden;
+            padding-left:40px;
+        }
+        .bottom_top2{
+            height:10%;
+            background-color: rgb(141, 125, 125);
+        }
+        .bottom_left{
+            float:left;
+            width:33.2%;
+            height:800px;
+            overflow-y:scroll;
+            text-align:center;
+            padding-top:20px;
+        }
+        .bottom_center{
+            float:left;
+            width:33.3%;
+            height:800px;
+            text-align:center;
+            padding-top:20px;
+            overflow-y:scroll;
+        }
+        .bottom_right{
+            float:left;
+            width:33.5%;
+            height:800px;
+            text-align:center;
+            padding-top:20px;
+            overflow-y:scroll;
+        }
+        .bottom_bottom{
+            background-color: rgb(141, 125, 125);
+            height: 100px;
+            text-align: center;
+            padding-top:5px;
+            font-size:13px;
+        }
+        a{
+          text-decoration: none;
+        }
+        .th1{
+            border:2px solid black;
+            border-radius: 4px;
+            width:150px;
+            height:30px;
+        }
+        .th2{
+            border-bottom: 2px solid rgb(41, 36, 36);
+            width:1%;
+            height:161px;
+        }
+        .th3{
+            width:50px;
+            height:40px;
+        }
+        .menu{
+            border-bottom: 2px solid black;
+            width:1%;
+            height:150px;
+        }
+        .td1{
+            width:150px;
+            height:30px;
+            text-align:center;
+            border-right:2px solid rgb(153, 136, 136);
+        }
+        .ID{
+            width:100px;
+            height:20px;
+        }
+    </style> 
+    <script>
+        function error()
+        {
+            alert("서버 준비중입니다.");
+        }
+    </script>
+</head>
+<body bgcolor="white">
+    <div class="head">
+        <h1><a href="Kyu_Shop.html"style="color:white;">Kyu_Shop</a></h1>
+    </div>
+    <div class="head_2">
+        <table>
+            <tr>
+                <th class="th1"><a href="로그인.html" style="font-size:20px; color:white">login/sign</a></th>
+                <td class="td1"><a href="회사소개.html" style="color:white">회사 소개</a></td>
+                <td class="td1"><a href="공지사항.html" style="color:white">공지 사항</a></td>
+                <td class="td1"><a href="고객센터.html" style="color:white">문의 사항</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="middle">
+        <div class="middle_top">
+            <h1><center>Login/Sign</center></h1>
+            <br>
+            <hr>
+            <br>
+            <form>
+                <table style="border: 5px double black;" align="center">
+                    <tr><th style="border-bottom: 1px dotted black; height:80px; width:120px;"><label for="ID">ID</label></th><th style="border-bottom: 1px dotted black;"><input type="text" name="ID" id="ID" style="height:30px;"></th></tr>
+                    <tr><th style="height:80px;  width:120px;"><label for="password">Password</label></th><th><input type="password" name="password" id="password" style="height:30px;"></th></tr>
+                    <tr><th style="border-top: 1px solid black;height:70px;" colspan="3"><input type="submit" name="login" value="login" style="height:50px; width:300px; font-size:20px;" onclick="error()"></th></tr>
+                </table>
+                <br>
+                <hr>
+                <table align="center">
+                    <tr>
+                        <th style="border:2px solid black; border-radius: 4px; font-size:20px;"><a href="회원가입.html" style="color:black;">회원가입</a></th>
+                    </tr>
+                </table>
+            </form>
+            
+        </div>
+    </div>
+    <hr>
+    <div class="bottom_top">
+        <h1 style="color:white;">상품</h1>
+    </div>
+    <div class="bottom">
+        <div class="bottom_top2">
+            <table style="width:100%; height:100%; color:white;">
+                <tr>
+                    <th style="width:33%; border-right:2px solid rgb(153, 136, 136); font-size:20px;">TOP</th>
+                    <th style="width:33%; border-right:2px solid rgb(153, 136, 136); font-size:20px;">BOTTOM</th>
+                    <th style="width:33%; font-size:20px;">SHOES</th>
+                </tr>
+            </table>
+        </div>
+        <div class="bottom_left">
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/TOP1.PNG" width="300px;">
+            <p><strong>트레이닝 반팔</strong></p><p style="font-size:15px;">12,000원</p><hr><br><br>
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/TOP2.PNG" width="300px;">
+            <p><strong>무브 오버핏 반팔티</strong></p><p style="font-size:15px;">9,900원</p><hr><br><br>
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/TOP3.PNG" width="300px;">
+            <p><strong>단가라 반팔티</strong></p><p style="font-size:15px;">9,900원</p><hr><br><br>
+        </div>
+        <div class="bottom_center">
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/Bottom1.PNG" width="300px;">
+            <p><strong>린넨 밴딩 팬츠</strong></p><p style="font-size:15px;">9,900원</p><hr><br><br>
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/Bottom2.PNG" width="300px;">
+            <p><strong>인생 슬렉스</strong></p><p style="font-size:15px;">16,900원</p><hr><br><br>
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/Bottom3.PNG" width="300px;">
+            <p><strong>린넨 밴딩 반바지</strong></p><p style="font-size:15px;">8,900원</p><hr><br><br>
+        </div>
+        <div class="bottom_right">
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/Shoes1.PNG" width="300px;">
+            <p><strong>케이즈 투라인 슬리퍼</strong></p><p style="font-size:15px;">22,000원</p><hr><br><br>
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/Shoes2.PNG" width="300px;">
+            <p><strong>스니커즈</strong></p><p style="font-size:15px;">32,00원</p><hr><br><br>
+            <img src="file:///C:/Users/dmrb2/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/Shoes3.PNG" width="300px;">
+            <p><strong>옥스포드 로퍼</strong></p><p style="font-size:15px;">49,900원</p><hr><br><br>
+        </div>
+    </div>
+    <div class="bottom_bottom">
+        <p>회사명: Kyu_Shop / 사업장 주소: 경기도 안산시 단원구 초지동 행복한마을 2008동</p><hr>
+        고객센터 : 010 - 8012 - 5510<br>
+        평일: 10:00 ~ 17:00 / 주말: 12:00 ~ 15:00
+    </div>
+</body>
+</html> 

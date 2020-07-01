@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>글 작성</title>
+    <style>
+        body{
+            margin:0;
+            overflow-x: hidden;
+        }
+        .head{
+        margin:0;
+        background-color: rgb(41, 36, 36);
+        height:100px;
+        width:100%;
+        overflow:hidden;
+        padding-left:40px;
+        position: fixed;
+        top:0px;
+        }
+        .head_2{
+            background-color:rgb(141, 125, 125);
+            height:50px;
+            width:100%;
+            overflow:hidden;
+            padding-left:40px;
+            padding-top:10px;
+            position: fixed;
+            top:100px;
+        }
+        .middle{
+            padding-top:150px;
+            background-color:white;
+            height:800px;
+            width:100%;
+            border:2px solid black;
+            overflow: hidden;
+            
+        }
+        .middle_top{
+            background-color:rgb(177, 171, 162);
+            height:50px;
+            width:100%;
+            
+        }
+        .bottom_bottom{
+            background-color: rgb(141, 125, 125);
+            height: 100px;
+            text-align: center;
+            padding-top:5px;
+            font-size:13px;
+        }
+        a{
+          text-decoration: none;
+        }
+        .th1{
+            border:2px solid black;
+            border-radius: 4px;
+            width:150px;
+            height:30px;
+        }
+        .th2{
+            border-bottom: 2px solid rgb(41, 36, 36);
+            width:1%;
+            height:161px;
+        }
+        .th3{
+            width:50px;
+            height:40px;
+        }
+        .menu{
+            border-bottom: 2px solid black;
+            width:1%;
+            height:150px;
+        }
+        .td1{
+            width:150px;
+            height:30px;
+            text-align:center;
+            border-right:2px solid rgb(153, 136, 136);
+        }
+    </style>
+    
+    <script>
+        function font_col(){
+
+            var selectOption = document.getElementById("font-color");
+            var select = selectOption.options[selectOption.selectedIndex].value;
+            if(select == 'black')
+            {
+                frm.texts.style.color="black";
+            }
+            else if(select == 'red')
+            {
+                frm.texts.style.color="red";
+            }
+            else if(select == 'blue')
+            {
+                frm.texts.style.color="blue";
+            }
+        }
+        function font_fam(){
+            var selectOption = document.getElementById("font_family");
+            var select = selectOption.options[selectOption.selectedIndex].value;
+
+            if(select == '궁서')
+            {
+                frm.texts.style.fontFamily="궁서";
+            }
+            else if(select == '고딕')
+            {
+                frm.texts.style.fontFamily="고딕";
+            }
+            else if(select == '굴림')
+            {
+                frm.texts.style.fontFamily="굴림";
+            }
+        }
+        function font_si(){
+            var selectOption = document.getElementById("font_size");
+            var select = selectOption.options[selectOption.selectedIndex].value;
+            if(select=='5px')
+            {
+                frm.texts.style.fontSize="5px";
+            }
+            else if(select == "10px")
+            {
+                frm.texts.style.fontSize="10px";
+            }
+            if(select == '15px')
+            {
+                frm.texts.style.fontSize="15px";
+            } if(select == '20px')
+            {
+                frm.texts.style.fontSize="20px";
+            } if(select == '30px')
+            {
+                frm.texts.style.fontSize="30px";
+        }
+        }
+        function correct(){
+            alert("오픈기간때 작성해 주십시오.");
+        }
+    </script>
+    
+</head>
+<body bgcolor="white">
+    
+    <div class="head">
+        
+        <h1><a href="Kyu_Shop.html"style="color:white;">Kyu_Shop</a></h1>
+    </div>
+    <div class="head_2">
+        <table>
+            <tr>
+                <th class="th1"><a href="로그인.html" style="font-size:20px; color:white">login/sign</a></th>
+                <td class="td1"><a href="회사소개.html" style="color:white">회사 소개</a></td>
+                <td class="td1"><a href="공지사항.html" style="color:white">공지 사항</a></td>
+                <td class="td1"><a href="고객센터.html" style="color:white">문의 사항</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="middle">
+        <h1 style="background-color: rgb(177, 171, 162);height:50px;"><center>문의 사항: 글 작성</center></h1>
+    <hr>
+        <br><br>
+        <form id="frm">
+            <table align="center" style="border:1px solid black;">
+            <tr>
+                <th colspan="2" style="width:200px; height:40px; border-bottom:2px double rgb(133, 128, 128); font-size:20px;">글 작성</th>
+                <th style="width:800px; border-bottom:2px double rgb(133, 128, 128);">
+                    제목:
+                    <input type="text" id="제목" style="width:700px; border-width:5px;">
+                </th>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td style="height:40px; padding-left:90px;">
+                    
+                </td>
+                    
+                <td>
+                    글씨체&nbsp;
+                    <select style="width:100px; height:30px;" id="font_family" onchange="font_fam()" >
+                        <option value="궁서">궁서</option> 
+                        <option value="고딕">고딕</option>
+                        <option value="굴림">굴림</option>
+                    </select>
+                    &nbsp;&nbsp;l&nbsp;&nbsp;
+                    글 색상&nbsp;
+                    <select style="width:100px; height:30px;" id="font-color" onchange="font_col()">
+                        <option value="black">검은색</option> 
+                        <option value="red">빨간색</option>
+                        <option value="blue">파란색</option>
+                    </select>
+                    &nbsp;&nbsp;l&nbsp;&nbsp;
+                    글자 크기&nbsp;
+                    <select style="width:100px; height:30px;" id="font_size" onchange="font_si()">
+                        <option value="5px">5px</option> 
+                        <option value="10px">10px</option>
+                        <option value="15px">15px</option>
+                        <option value="20px">20px</option>
+                        <option value="30px">30px</option>
+                    </select>
+                </td>
+
+                <tr>
+                    <th style="height:450px; width:150px; border-right: 2px solid rgb(133, 128, 128); border-top:2px solid rgb(133, 128, 128); ">내용</th>
+                    <td colspan="2">
+                        <textarea style="height:450px; width:900px; border-width:5px;" id="texts">
+                            
+                        </textarea>
+                    </td>
+                
+                </tr>
+            </tr>
+            <table style="padding-left:70%; padding-top:10px;">
+                <tr>
+                    <th style="border: 1px solid black; width:100px; height:40px; border-radius:10% 10%;"><a href="고객센터.html" onclick="correct()">글 작성</th>
+                </tr>
+            </table>
+        </table>
+        </form>
+        
+        
+    </div>
+    <div class="bottom_bottom">
+        <p>회사명: Kyu_Shop / 사업장 주소: 경기도 안산시 단원구 초지동 행복한마을 2008동</p><hr>
+        고객센터 : 010 - 8012 - 5510<br>
+        평일: 10:00 ~ 17:00 / 주말: 12:00 ~ 15:00
+    </div>
+</body>
+</html> 
